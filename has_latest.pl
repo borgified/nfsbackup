@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
-my $email='email@domain.com';
+my %config = do '/secret/nfsbackup.config';
+my $email=$config{'email'};
 
 use warnings;
 use strict;

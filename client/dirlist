@@ -1,0 +1,13 @@
+#######################################################
+# specify directories to back up here
+# 1. paths starting with /nfs are reserved (dont use)
+# 2. copying will be recursive so dont say "/" as this
+#    will include /nfs
+# 3. # and empty lines are ignored
+#######################################################
+
+# this first path backs up the backup script itself
+# along with this file. recommended that you keep this.
+/root/scripts
+
+#list directories below, one per line

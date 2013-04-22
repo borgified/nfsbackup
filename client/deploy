@@ -1,0 +1,31 @@
+mkdir -p /nfs/usrc-nfsbackup
+mkdir -p /root/scripts/nfsbackup/log
+cd /root/scripts/nfsbackup
+scp root@usilshp1:/root/scripts/nfsbackup/* .
+
+usilgpuj,usiljsb4
+vmount: operation not permited
+#AIX versions 4.x and 5.x
+#Sometimes Linux NFS servers will do port checking and require that the NFS client use a reserved port.
+nfso -o nfs_use_reserved_ports=1
+
+#make it permanent
+vi /etc/rc.nfs
+put this at the end:
+#fix nfs mount issue: vmount: operation not permited
+`nfso -o nfs_use_reserved_ports=1`
+
+
+
+
+0 18 * * * /root/scripts/nfsbackup/nfsbackup.sh /root/scripts/nfsbackup/dirlist >> /root/scripts/nfsbackup/log/backup.log
+
+18:00 usilshp1
+18:15 ibbisf02
+18:30 usildv01
+18:45 hawk
+19:00 scorpion
+19:15 usampsa0
+19:30 usamsu04
+19:45 usilgpuj
+20:00 usiljsb4 

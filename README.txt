@@ -16,9 +16,9 @@ run it once a day using cron
 
 back on the VM:
 run on cron:
-0 12 * * 1-5 /root/scripts/archiver.pl
-0 11 * * 1-5 /root/scripts/has_latest.pl
-0 10 * * 1-5 /root/scripts/janitor.pl
+0 12 * * * /root/scripts/archiver.pl
+0 11 * * * /root/scripts/has_latest.pl
+0 10 * * * /root/scripts/janitor.pl
 
 archiver.pl will create directory /data/*/archive for each "host" 
 and drop gzipped tarball of the contents of /data/*/backup.

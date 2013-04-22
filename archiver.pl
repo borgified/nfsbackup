@@ -25,7 +25,7 @@ foreach my $path (@paths){
 		my $filename = "$date-archive-$host[-1].tar.gz";
 
 #create ./archive if it doesnt exist
-		system('mkdir -p $host/archive');
+		system("mkdir -p $path/archive");
 
 #create compressed tarball
 #drop tarball into ./archive
