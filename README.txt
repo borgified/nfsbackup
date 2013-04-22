@@ -46,3 +46,10 @@ back when it is done copying.
 
 the VM which now contains the backup data from multiple hosts is
 itself backed up through a different method, like Veeam.
+
+
+* client/ contains files you should copy to the client computer you want to back up
+deploy : just some notes, some prep work commands to be run on client machines like creating mountpoints and directories
+dirlist : input file for nfsbackup.sh (one directory per line)
+nfsbackup.sh : run this as cronjob in client machine so that files are copied to nfs mounted directory
+
